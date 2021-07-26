@@ -4,4 +4,13 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\FormsModel\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\VaccinationManager\VaccinationManager.Models\VaccinationManager.Models.csproj" />
+    <ProjectReference Include="..\..\VaccinationManager\VaccinationManager.Tools\VaccinationManager.Tools.csproj" />
+  </ItemGroup>
+
 </Project>
