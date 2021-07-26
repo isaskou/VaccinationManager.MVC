@@ -7,6 +7,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using VaccinationManager.DAL;
+using VaccinationManager.Models.Center;
+using VaccinationManager.MVC.Services;
 
 namespace VaccinationManager.MVC
 {
@@ -23,7 +26,17 @@ namespace VaccinationManager.MVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            //Injection des services
+            //services.AddScoped<DataContext>();
+
+            services.AddScoped<CenterServices>();
+
+            //Injection des modeles
+            services.AddScoped<VaccinationCenter>();
         }
+
+        
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

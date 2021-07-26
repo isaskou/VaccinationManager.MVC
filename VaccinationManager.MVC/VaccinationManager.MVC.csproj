@@ -5,10 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\FormsModel\" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\VaccinationManager\VaccinationManager.DAL\VaccinationManager.DAL.csproj" />
     <ProjectReference Include="..\..\VaccinationManager\VaccinationManager.Models\VaccinationManager.Models.csproj" />
     <ProjectReference Include="..\..\VaccinationManager\VaccinationManager.Tools\VaccinationManager.Tools.csproj" />
   </ItemGroup>
